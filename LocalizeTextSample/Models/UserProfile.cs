@@ -8,7 +8,8 @@ namespace LocalizeTextSample.Models
 {
     public class UserProfile
     {
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Localize), ErrorMessageResourceName = "ValidationError_Required")]
+        [Display(ResourceType = typeof(Localize), Name = "Name")]
         public string Name { get; set; }
     }
 }

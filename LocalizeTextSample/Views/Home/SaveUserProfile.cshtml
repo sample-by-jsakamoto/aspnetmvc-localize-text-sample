@@ -1,15 +1,15 @@
 ﻿@model LocalizeTextSample.Models.UserProfile
 
 @{
-    ViewBag.Title = "Complete";
+    ViewBag.Title = Localize.Complete;
 }
 
-<h2>Complete</h2>
+<h2>@Localize.Complete</h2>
 
 <p>
-    User name is @Model.Name
+    @string.Format(Localize.UserNameIsX, Model.Name)
 </p>
 <p>
-    <a href="@Url.Action("Index")">Back</a>
+    <a href="@Url.Action("Index")">@Localize.Back</a>
 </p>
 
